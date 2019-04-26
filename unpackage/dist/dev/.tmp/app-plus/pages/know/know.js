@@ -122,12 +122,40 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 var _default =
 {
   data: function data() {
     return {
-      libraryList: [
-      {
+      libraryList: [{
         id: '0',
         imgUrl: '../../static/img/library_1.png',
         text: '内部规范制度资料库' },
@@ -150,8 +178,15 @@ var _default =
       {
         id: '0',
         imgUrl: '../../static/img/library_6.png',
-        text: '内部规范制度资料库' }] };
+        text: '内部规范制度资料库' }],
 
+      caseList: [{
+        id: 0,
+        title: '',
+        textContent: '',
+        time: '',
+        read: 0,
+        collect: 0 }] };
 
 
   } };exports.default = _default;

@@ -1,3 +1,32 @@
+.search {
+  background: #eee;
+  padding: 20rpx;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.search view {
+  text-align: center;
+  height: 64rpx;
+  border-radius: 32rpx;
+  background: #fff;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.search text {
+  font-size: 26rpx;
+  color: #999;
+}
 .libraryMain {
   background: #fff;
   padding: 20rpx 0;
@@ -45,5 +74,117 @@
 }
 .libraryMain .libraryList .libraryItem text {
   font-size: 26rpx;
+}
+.caseMain {
+  background: #fff;
+}
+.caseMain .title {
+  border-bottom: 1rpx solid #dddddd;
+  padding: 10rpx 20rpx;
+  font-size: 36rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.caseMain .title .more {
+  font-size: 26rpx;
+  color: #999;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.caseMain .title .more image {
+  height: 26rpx;
+  width: 26rpx;
+}
+.caseMain .caseItem {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 20rpx;
+}
+.caseMain .caseItem .img {
+  height: 171rpx;
+  width: 313rpx;
+  display: block;
+  border-radius: 10rpx;
+  overflow: hidden;
+}
+.caseMain .caseItem .img image {
+  height: 171rpx;
+  width: 313rpx;
+  display: block;
+}
+.caseMain .caseItem .itemMain {
+  width: 375rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-content: space-around;
+      -ms-flex-line-pack: distribute;
+          align-content: space-around;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.caseMain .caseItem .itemMain .itemTitle {
+  font-size: 30rpx;
+  color: #333;
+  line-height: 1;
+  margin-bottom: 10rpx;
+}
+.caseMain .caseItem .itemMain .itemContent {
+  font-size: 26rpx;
+  color: #666;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  line-height: 1.4;
+  text-indent: 52rpx;
+}
+.caseMain .caseItem .itemMain .itemFooter {
+  font-size: 24rpx;
+  color: #999;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
