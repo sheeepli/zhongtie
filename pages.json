@@ -1,0 +1,100 @@
+{
+    "pages": [ //pages数组中第一项表示应用启动页,
+        {
+            "path": "pages/main/main",
+            "style": {
+                "navigationBarTitleText": "登录模板"
+            }
+        }, {
+            "path": "pages/login/login",
+            "style": {
+                "navigationBarTitleText": "登录",
+				"app-plus": {
+					"bounce":"none",
+					"titleNView": "none"
+				},
+				"backgroundColor":"#FFFFFF"
+            }
+        }, {
+            "path": "pages/reg/reg",
+            "style": {
+                "navigationBarTitleText": "注册"
+            }
+        },{
+            "path": "pages/forget/forget",
+            "style": {
+                "navigationBarTitleText": "忘记密码"
+            }
+        }, {
+            "path": "pages/pwd/pwd",
+            "style": {
+                "navigationBarTitleText": "找回密码"
+            }
+        }, {
+			"path":"pages/know/know",
+			"style": {
+				"navigationBarTitleText": "知识库",
+				"app-plus": {
+					"bounce":"none"
+				}
+			}
+		}, {
+			"path":"pages/specital/specital",
+			"style": {
+				"navigationBarTitleText":"专家库"
+			}
+		}, {
+			"path":"pages/smart/smart",
+			"style": {
+				"navigationBarTitleText":"智能掘进"
+			}
+		}, {
+			"path":"pages/found/found",
+			"style": {
+				"navigationBarTitleText":"发现",
+				"backgroundColor":"#00D2F1"
+			}
+		}, {
+			"path":"pages/my/my",
+			"style": {
+				"navigationBarTitleText":"我的"
+			}
+		}
+    ],
+    "tabBar": {
+        "color": "#7a7e83",
+        "selectedColor": "#00d2f1",
+        "backgroundColor": "#ffffff",
+        "list": [{
+            "pagePath": "pages/know/know",
+            "text": "知识库",
+            "iconPath": "static/img/home.png",
+            "selectedIconPath": "static/img/homeHL.png"
+        }, {
+            "pagePath": "pages/specital/specital",
+            "text": "专家库",
+            "iconPath": "static/img/home.png",
+            "selectedIconPath": "static/img/homeHL.png"
+        }, {
+            "pagePath": "pages/smart/smart",
+            "text": "智能掘进",
+            "iconPath": "static/img/home.png",
+            "selectedIconPath": "static/img/homeHL.png"
+        }, {
+            "pagePath": "pages/found/found",
+            "text": "发现",
+            "iconPath": "static/img/home.png",
+            "selectedIconPath": "static/img/homeHL.png"
+        }, {
+            "pagePath": "pages/my/my",
+            "text": "我的",
+            "iconPath": "static/img/home.png",
+            "selectedIconPath": "static/img/homeHL.png"
+        }]
+    },
+    "globalStyle": {
+        "navigationBarTextStyle": "white",
+        "navigationBarBackgroundColor": "#00d2f1",
+        "backgroundColor": "#fbf9fe"
+    }
+}
