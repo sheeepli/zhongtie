@@ -13,7 +13,7 @@
 				<text>知识库</text>
 			</view>
 			<view class="libraryList">
-				<view class="libraryItem" v-for="lib in libraryList" :key="lib.id">
+				<view class="libraryItem" v-for="lib in libraryList" :key="lib.id" @tap="openPage(lib.id)">
 					<image :src="lib.imgUrl" mode="aspectFit"></image>
 					<text>{{lib.text}}</text>
 				</view>
@@ -29,13 +29,11 @@
 			</view>
 			<view class="caseList">
 				<view class="caseItem">
-					<view class="img">
-						<image src="../../static/img/caseImg.png" mode=""></image>
-					</view>
+					<image src="../../static/img/caseImg.png" mode=""></image>
 					<view class="itemMain">
 						<text class="itemTitle">员工活动参与记录</text>
 						<view>
-							<text class="itemContent">专辑描述：记录公司产品部人员参与和组织的活动。时间轴的应用场景，由于产品部人组织的活动。时间轴的应用场景，由于产品部人由于产品部人</text>
+							<text class="itemText">专辑描述：记录公司产品部人员参与和组织的活动。时间轴的应用场景，由于产品部人组织的活动。时间轴的应用场景，由于产品部人由于产品部人</text>
 						</view>
 						<view class="itemFooter">
 							<text>2019-04-26</text>
@@ -55,31 +53,7 @@
 	export default {
 		data() {
 			return {
-				libraryList: [{
-					id: '0',
-					imgUrl: '../../static/img/library_1.png',
-					text: '内部规范制度资料库'
-				}, {
-					id: '0',
-					imgUrl: '../../static/img/library_2.png',
-					text: '盾构施工常见问题库'
-				}, {
-					id: '0',
-					imgUrl: '../../static/img/library_3.png',
-					text: '内部规范制度资料库'
-				}, {
-					id: '0',
-					imgUrl: '../../static/img/library_4.png',
-					text: '内部规范制度资料库'
-				}, {
-					id: '0',
-					imgUrl: '../../static/img/library_5.png',
-					text: '内部规范制度资料库'
-				}, {
-					id: '0',
-					imgUrl: '../../static/img/library_6.png',
-					text: '内部规范制度资料库'
-				}, ],
+				libraryList: [],
 				caseList: [{
 					id: 0,
 					title: '',
@@ -89,7 +63,51 @@
 					collect: 0,
 				}]
 			};
-		}
+		},
+		onLoad() {
+			// uni.setStorage({
+			// 	key: 'libList',
+			// 	data: [{
+			// 		id: '1',
+			// 		imgUrl: '../../static/img/library_1.png',
+			// 		text: '内部规范制度资料库'
+			// 	}, {
+			// 		id: '2',
+			// 		imgUrl: '../../static/img/library_2.png',
+			// 		text: '盾构施工常见问题库'
+			// 	}, {
+			// 		id: '3',
+			// 		imgUrl: '../../static/img/library_3.png',
+			// 		text: '内部规范制度资料库'
+			// 	}, {
+			// 		id: '4',
+			// 		imgUrl: '../../static/img/library_4.png',
+			// 		text: '内部规范制度资料库'
+			// 	}, {
+			// 		id: '5',
+			// 		imgUrl: '../../static/img/library_5.png',
+			// 		text: '内部规范制度资料库'
+			// 	}, {
+			// 		id: '6',
+			// 		imgUrl: '../../static/img/library_6.png',
+			// 		text: '内部规范制度资料库'
+			// 	}]
+			// })
+			
+			uni.getStorage({
+				key: 'libList',
+				success: (res) => {
+					this.libraryList = res.data
+				}
+			})
+		},
+		methods: {
+			openPage(id) {
+				uni.navigateTo({
+					url: `../libDetail/libDetail?id=${id}`
+				})
+			}
+		},
 	}
 </script>
 
@@ -183,19 +201,13 @@
 			align-items: flex-start;
 			padding: 20upx;
 
-			.img {
-				height: 171upx;
-				width: 313upx;
-				display: block;
-				border-radius: 10upx;
-				overflow: hidden;
 
 				image {
+					border-radius: 10upx;
 					height: 171upx;
 					width: 313upx;
 					display: block;
 				}
-			}
 
 			.itemMain {
 				width: 375upx;
@@ -211,7 +223,7 @@
 					margin-bottom: 10upx;
 				}
 
-				.itemContent {
+				.itemText {
 					font-size: 26upx;
 					color: #666;
 					overflow: hidden;

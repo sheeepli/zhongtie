@@ -126,14 +126,8 @@
           align-items: flex-start;
   padding: 20rpx;
 }
-.caseMain .caseItem .img {
-  height: 171rpx;
-  width: 313rpx;
-  display: block;
+.caseMain .caseItem image {
   border-radius: 10rpx;
-  overflow: hidden;
-}
-.caseMain .caseItem .img image {
   height: 171rpx;
   width: 313rpx;
   display: block;
@@ -163,7 +157,7 @@
   line-height: 1;
   margin-bottom: 10rpx;
 }
-.caseMain .caseItem .itemMain .itemContent {
+.caseMain .caseItem .itemMain .itemText {
   font-size: 26rpx;
   color: #666;
   overflow: hidden;

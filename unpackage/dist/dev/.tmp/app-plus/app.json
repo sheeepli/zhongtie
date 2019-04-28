@@ -9,7 +9,8 @@
     "pages/specital/specital",
     "pages/smart/smart",
     "pages/found/found",
-    "pages/user/user"
+    "pages/user/user",
+    "pages/libDetail/libDetail"
   ],
   "subPackages": [],
   "window": {

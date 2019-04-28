@@ -59,7 +59,17 @@
 			"style": {
 				"navigationBarTitleText":"我的"
 			}
-		}
+		}, {
+            "path" : "pages/libDetail/libDetail",
+            "style": {
+				"navigationBarTextStyle":"black",
+				"navigationBarBackgroundColor":"#fff",
+				"app-plus": {
+					"bounce":"none",
+					"titleNView": false
+				}
+			}
+        }
     ],
     "tabBar": {
         "color": "#7a7e83",
