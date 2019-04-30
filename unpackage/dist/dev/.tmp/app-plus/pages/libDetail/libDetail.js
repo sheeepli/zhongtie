@@ -98,7 +98,45 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var uniSwipeAction = function uniSwipeAction() {return __webpack_require__.e(/*! import() | components/uni-swipe-action/uni-swipe-action */ "components/uni-swipe-action/uni-swipe-action").then(__webpack_require__.bind(null, /*! @/components/uni-swipe-action/uni-swipe-action.vue */ "../../../../code files/中铁/zhongtie/components/uni-swipe-action/uni-swipe-action.vue"));};var _default =
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var uniSwipeAction = function uniSwipeAction() {return __webpack_require__.e(/*! import() | components/uni-swipe-action/uni-swipe-action */ "components/uni-swipe-action/uni-swipe-action").then(__webpack_require__.bind(null, /*! @/components/uni-swipe-action/uni-swipe-action.vue */ "../../../../code files/中铁/zhongtie/components/uni-swipe-action/uni-swipe-action.vue"));};var uniDrawer = function uniDrawer() {return __webpack_require__.e(/*! import() | components/uni-drawer/uni-drawer */ "components/uni-drawer/uni-drawer").then(__webpack_require__.bind(null, /*! @/components/uni-drawer/uni-drawer.vue */ "../../../../code files/中铁/zhongtie/components/uni-drawer/uni-drawer.vue"));};var _default =
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -161,11 +199,15 @@ __webpack_require__.r(__webpack_exports__);
 
 {
   components: {
-    uniSwipeAction: uniSwipeAction },
+    uniSwipeAction: uniSwipeAction,
+    uniDrawer: uniDrawer },
 
   data: function data() {
     return {
+      id: '',
       title: '',
+      current: 0,
+      showDrawer: false,
       options: [{
         text: '收藏',
         style: {
@@ -174,13 +216,18 @@ __webpack_require__.r(__webpack_exports__);
       {
         text: '分享',
         style: {
-          backgroundColor: '#00d2f1' } }] };
+          backgroundColor: '#00d2f1' } }],
+
+
+      filterGroup: [
+      {
+        title: '月份' }] };
 
 
 
   },
   onLoad: function onLoad(option) {var _this = this;
-    // this.title = option.id;
+    this.id = option.id;
     uni.getStorage({
       key: 'libList',
       success: function success(res) {
@@ -191,13 +238,23 @@ __webpack_require__.r(__webpack_exports__);
   methods: {
     bindClick: function bindClick(btn) {
       if (btn.index === 1) {
-        console.log('分享', " at pages\\libDetail\\libDetail.vue:94");
+        console.log('分享', " at pages\\libDetail\\libDetail.vue:141");
       } else if (btn.index === 0) {
-        console.log('收藏', " at pages\\libDetail\\libDetail.vue:96");
+        console.log('收藏', " at pages\\libDetail\\libDetail.vue:143");
       }
     },
     openPage: function openPage() {
-      console.log(111, " at pages\\libDetail\\libDetail.vue:100");
+      console.log(111, " at pages\\libDetail\\libDetail.vue:147");
+    },
+    getMsg: function getMsg(index) {
+      this.current = index;
+      // 根据 index 获取数据
+    },
+    showFilter: function showFilter() {
+      this.showDrawer = true;
+    },
+    closeDrawer: function closeDrawer() {
+      this.showDrawer = false;
     } } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ "./node_modules/@dcloudio/uni-app-plus/dist/index.js")["default"]))
 

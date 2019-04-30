@@ -1,5 +1,6 @@
 {
   "navigationBarTitleText": "知识库",
+  "navigationBarTextStyle": "white",
   "bounce": "none",
   "usingComponents": {}
 }

@@ -149,6 +149,22 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 var _default =
 {
   data: function data() {
@@ -202,9 +218,15 @@ var _default =
 
   },
   methods: {
-    openPage: function openPage(id) {
+    openPage: function openPage(pageName, id) {
+      var url = '';
+      if (id) {
+        url = "../".concat(pageName, "/").concat(pageName, "?id=").concat(id);
+      } else {
+        url = "../".concat(pageName, "/").concat(pageName);
+      }
       uni.navigateTo({
-        url: "../libDetail/libDetail?id=".concat(id) });
+        url: url });
 
     } } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ "./node_modules/@dcloudio/uni-app-plus/dist/index.js")["default"]))

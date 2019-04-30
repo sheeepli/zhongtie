@@ -1,3 +1,12 @@
+.status-bar {
+  background: #00d2f1;
+}
+.header {
+  background: #00d2f1;
+}
+.header .header-title {
+  color: #fff;
+}
 .search {
   background: #eee;
   padding: 20rpx;

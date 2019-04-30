@@ -39,7 +39,7 @@
     },
     "statusbar": {
       "immersed": "supportedDevice",
-      "style": "light",
+      "style": "dark",
       "background": "#00d2f1"
     },
     "usingComponents": true,

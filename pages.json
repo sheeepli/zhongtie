@@ -34,6 +34,7 @@
 			"path":"pages/know/know",
 			"style": {
 				"navigationBarTitleText": "知识库",
+				"navigationBarTextStyle":"white",
 				"app-plus": {
 					"bounce":"none"
 				}
@@ -41,33 +42,71 @@
 		}, {
 			"path":"pages/specital/specital",
 			"style": {
-				"navigationBarTitleText":"专家库"
+				"navigationBarTitleText":"专家库",
+				"navigationBarTextStyle":"white"
+
 			}
 		}, {
 			"path":"pages/smart/smart",
 			"style": {
-				"navigationBarTitleText":"智能掘进"
+				"navigationBarTitleText":"智能掘进",
+				"navigationBarTextStyle":"white"
+
 			}
 		}, {
 			"path":"pages/found/found",
 			"style": {
 				"navigationBarTitleText":"发现",
+				"navigationBarTextStyle":"white",
+
 				"backgroundColor":"#00D2F1"
 			}
 		}, {
 			"path":"pages/user/user",
 			"style": {
-				"navigationBarTitleText":"我的"
+				"navigationBarTitleText":"我的",
+				"navigationBarTextStyle":"white"
+
 			}
 		}, {
             "path" : "pages/libDetail/libDetail",
             "style": {
-				"navigationBarTextStyle":"black",
 				"navigationBarBackgroundColor":"#fff",
 				"app-plus": {
 					"bounce":"none",
 					"titleNView": false
 				}
+			}
+        }
+        ,{
+            "path" : "pages/innerSearch/innerSearch",
+            "style" : {
+				"backgroundColor":"#fff",
+				"navigationBarBackgroundColor":"#fff",
+				"app-plus": {
+					"titleNView": {
+						"searchInput": {
+							"autoFocus":true,
+							"align":"left",
+							"backgroundColor":"#eeeeee",
+							"borderRadius":"20px",
+							"placeholder":"输入你要搜索的内容"
+						},
+						"buttons":[
+							{
+								"text": "取消",
+								"fontSize":"26px",
+								"color":"#00D2F1"
+							}
+						]
+					}
+				}
+			}
+        }
+        ,{
+            "path" : "pages/search/search",
+            "style" : {
+				"enablePullDownRefresh":true
 			}
         }
     ],
@@ -103,8 +142,9 @@
         }]
     },
     "globalStyle": {
-        "navigationBarTextStyle": "white",
+        "navigationBarTextStyle": "black",
         "navigationBarBackgroundColor": "#00d2f1",
-        "backgroundColor": "#fbf9fe"
+        "backgroundColor": "#fbf9fe",
+		"navigationStyle":"custom"
     }
 }

@@ -10,13 +10,16 @@
     "pages/smart/smart",
     "pages/found/found",
     "pages/user/user",
-    "pages/libDetail/libDetail"
+    "pages/libDetail/libDetail",
+    "pages/innerSearch/innerSearch",
+    "pages/search/search"
   ],
   "subPackages": [],
   "window": {
-    "navigationBarTextStyle": "white",
+    "navigationBarTextStyle": "black",
     "navigationBarBackgroundColor": "#00d2f1",
-    "backgroundColor": "#fbf9fe"
+    "backgroundColor": "#fbf9fe",
+    "navigationStyle": "custom"
   },
   "tabBar": {
     "color": "#7a7e83",

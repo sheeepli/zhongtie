@@ -12,7 +12,7 @@
 	}
 </script>
 
-<style>
+<style lang="less">
 	/*每个页面公共css */
 	/* uni-app默认全局使用flex布局。因为flex布局有利于跨更多平台，尤其是采用原生渲染的平台。如不了解flex布局，请参考http://www.w3.org/TR/css3-flexbox/。如不使用flex布局，请删除或注释掉本行。*/
 	body,
@@ -42,12 +42,51 @@
 		min-height: 100%;
 		display: flex;
 	}
+	
+	.wrap {
+		display: flex;
+		flex-direction: column;
+		height: 100vh;
+		width: 100%;
+	}
+	
+	.status-bar {
+		height: var(--status-bar-height);
+		background: #fff;
+	}
+	.header {
+		height: 88upx;
+		display: flex;
+		font-size: 36upx;
+		justify-content: space-between;
+		padding: 0 20upx;
+		align-items: center;
+		align-content: center;
+		.header-left {
+			flex: 1;
+		}
+		.header-title {
+			justify-content: center;
+			color:#333;
+		}
+		.header-right {
+			justify-content: flex-end;
+			flex: 1;
+			display: flex;
+			align-items: center;
+		}
+		image {
+			width: 100%;
+			height: 100%;
+		}
+	}
 
 	.content {
 		display: flex;
 		flex: 1;
 		flex-direction: column;
+		overflow: scroll;
+		height: 100%;
 		background-color: #efeff4;
-		/* padding: 20upx; */
 	}
 </style>

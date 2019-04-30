@@ -1,9 +1,9 @@
 {
-  "navigationBarTextStyle": "black",
   "navigationBarBackgroundColor": "#fff",
   "bounce": "none",
   "titleNView": false,
   "usingComponents": {
-    "uni-swipe-action": "/components/uni-swipe-action/uni-swipe-action"
+    "uni-swipe-action": "/components/uni-swipe-action/uni-swipe-action",
+    "uni-drawer": "/components/uni-drawer/uni-drawer"
   }
 }

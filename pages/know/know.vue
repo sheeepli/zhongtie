@@ -1,46 +1,62 @@
 <template>
-	<view class="content">
+	<view class="wrap">
+		<view class="status-bar">
+				
+		</view>
+		<view class="header">
+			<view class="header-left">
+				<!-- 能不能不添加这两个元素做到居中呢？？？ -->
+			</view>
+			<view class="header-title">
+				知识库
+			</view>
+			<view class="header-right">
+				
+			</view>
+		</view>
 		<view class="search">
-			<view class="">
-				<icon type="search" size="20"/>
+			<view @tap="openPage('search')">
+				<icon type="search" size="18"/>
 				<text>
 					搜索
 				</text>
 			</view>
 		</view>
-		<view class="libraryMain">
-			<view class="title">
-				<text>知识库</text>
-			</view>
-			<view class="libraryList">
-				<view class="libraryItem" v-for="lib in libraryList" :key="lib.id" @tap="openPage(lib.id)">
-					<image :src="lib.imgUrl" mode="aspectFit"></image>
-					<text>{{lib.text}}</text>
+		<view class="content">
+			<view class="libraryMain">
+				<view class="title">
+					<text>知识库</text>
+				</view>
+				<view class="libraryList">
+					<view class="libraryItem" v-for="lib in libraryList" :key="lib.id" @tap="openPage('libDetail', lib.id)">
+						<image :src="lib.imgUrl" mode="aspectFit"></image>
+						<text>{{lib.text}}</text>
+					</view>
 				</view>
 			</view>
-		</view>
-		<view class="caseMain">
-			<view class="title">
-				<text>盾构案例</text>
-				<view class="more">
-					<text>更多</text>
-					<image src="../../static/img/right_arrow.png" mode=""></image>
+			<view class="caseMain">
+				<view class="title">
+					<text>盾构案例</text>
+					<view class="more">
+						<text>更多</text>
+						<image src="../../static/img/right_arrow.png" mode=""></image>
+					</view>
 				</view>
-			</view>
-			<view class="caseList">
-				<view class="caseItem">
-					<image src="../../static/img/caseImg.png" mode=""></image>
-					<view class="itemMain">
-						<text class="itemTitle">员工活动参与记录</text>
-						<view>
-							<text class="itemText">专辑描述：记录公司产品部人员参与和组织的活动。时间轴的应用场景，由于产品部人组织的活动。时间轴的应用场景，由于产品部人由于产品部人</text>
-						</view>
-						<view class="itemFooter">
-							<text>2019-04-26</text>
-							<text>|</text>
-							<text>200阅读</text>
-							<text>|</text>
-							<text>200收藏</text>
+				<view class="caseList">
+					<view class="caseItem" v-for="i in 10" :key='i'>
+						<image src="../../static/img/caseImg.png" mode=""></image>
+						<view class="itemMain">
+							<text class="itemTitle">员工活动参与记录</text>
+							<view>
+								<text class="itemText">专辑描述：记录公司产品部人员参与和组织的活动。时间轴的应用场景，由于产品部人组织的活动。时间轴的应用场景，由于产品部人由于产品部人</text>
+							</view>
+							<view class="itemFooter">
+								<text>2019-04-26</text>
+								<text>|</text>
+								<text>200阅读</text>
+								<text>|</text>
+								<text>200收藏</text>
+							</view>
 						</view>
 					</view>
 				</view>
@@ -102,9 +118,15 @@
 			})
 		},
 		methods: {
-			openPage(id) {
+			openPage(pageName, id) {
+				let url = ''
+				if (id) {
+					url = `../${pageName}/${pageName}?id=${id}`
+				} else {
+					url = `../${pageName}/${pageName}`
+				}
 				uni.navigateTo({
-					url: `../libDetail/libDetail?id=${id}`
+					url
 				})
 			}
 		},
@@ -112,6 +134,15 @@
 </script>
 
 <style lang="less">
+	.status-bar {
+		background: #00d2f1;
+	}
+	.header {
+		background: #00d2f1;
+		.header-title {
+			color: #fff;
+		}
+	}
 	.search {
 		background: #eee;
 		padding: 20upx;
