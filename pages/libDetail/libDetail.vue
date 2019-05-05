@@ -1,7 +1,7 @@
 <template>
 	<view class="wrap">
 		<view class="status-bar">
-
+			
 		</view>
 		<view class="header">
 			<view class="header-left">
@@ -33,21 +33,28 @@
 			</view>
 		</view>
 		<view class="content">
-			<uni-drawer :visible="showDrawer" mode="right" @close="closeDrawer" style="width: 488upx;">
+			<uni-drawer class="filterContent" :visible="showDrawer" mode="right" @close="closeDrawer" style="width: 488upx;">
 				<view class="wrap">
 					<view class="status-bar">
 						
 					</view>
 					<view class="content">
-						<view class="filterItem">
-							
+						<view class="filterItem" v-for="item in filterGroup" :key="item.value">
+							<view class="title">
+								{{item.title}}
+							</view>
+							<view class="filterData">
+								<view v-for="d in item.data" :class="{active: d.active}" :key="d.value" @tap="myFilter(item.value, d.value)">
+									{{d.key}}
+								</view>
+							</view>
 						</view>
 					</view>
 					<view class="footer">
-						<view class="reset">
+						<view class="reset" @tap="reset">
 							重置
 						</view>
-						<view class="submit">
+						<view class="submit" @tap="submit">
 							确定
 						</view>
 					</view>
@@ -121,7 +128,163 @@
 				}],
 				filterGroup: [
 					{
-						title: '月份'
+						title: '文档分类',
+						value: 0,
+						data: [
+							{
+								key: '全部',
+								active: false,
+								value: 0
+							}, {
+								key: '项目设计文件',
+								active: false,
+								value: 1
+							}, {
+								key: '项目进度文件',
+								active: false,
+								value: 2
+							}, {
+								key: '项目验收文件',
+								active: false,
+								value: 3
+							}, {
+								key: '招投标文件',
+								active: false,
+								value: 4
+							}, {
+								key: '项目计划文件',
+								active: false,
+								value: 5
+							}
+						]
+					}, {
+						title: '月份',
+						value: 1,
+						data: [
+							{
+								key: '全部',
+								active: false,
+								value: 0
+							}, {
+								key: '一月',
+								active: false,
+								value: 1,
+							}, {
+								key: '二月',
+								active: false,
+								value: 2,
+							}, {
+								key: '三月',
+								active: false,
+								value: 3,
+							}, {
+								key: '四月',
+								active: false,
+								value: 4,
+							}, {
+								key: '五月',
+								active: false,
+								value: 5,
+							}, {
+								key: '六月',
+								active: false,
+								value: 6,
+							}, {
+								key: '七月',
+								active: false,
+								value: 7,
+							}, {
+								key: '八月',
+								active: false,
+								value: 8,
+							}, {
+								key: '九月',
+								active: false,
+								value: 9,
+							}, {
+								key: '十月',
+								active: false,
+								value: 10,
+							}, {
+								key: '十一月',
+								active: false,
+								value: 11,
+							}, {
+								key: '十二月',
+								active: false,
+								value: 12,
+							}
+						]
+					}, {
+						title: '所属年度',
+						value: 2,
+						data: [
+							{
+								key: '全部',
+								active: false,
+								value: 0,
+							}, {
+								key: '2015',
+								active: false,
+								value: 1,
+							}, {
+								key: '2016',
+								active: false,
+								value: 2,
+							}, {
+								key: '2017',
+								active: false,
+								value: 3,
+							}, {
+								key: '2018',
+								active: false,
+								value: 4,
+							}, {
+								key: '2019',
+								active: false,
+								value: 5,
+							}
+						]
+					}, {
+						title: '文档类型',
+						value: 3,
+						data: [
+							{
+								key: '全部',
+								active: false,
+								value: 0
+							}, {
+								key: 'WBS',
+								active: false,
+								value: 1
+							}, {
+								key: '询单报价',
+								active: false,
+								value: 2
+							}, {
+								key: '采购订单',
+								active: false,
+								value: 3
+							}
+						]
+					}, {
+						title: '状态',
+						value: 4,
+						data: [
+							{
+								key: '全部',
+								active: false,
+								value: 0
+							}, {
+								key: '有效',
+								active: false,
+								value: 1
+							}, {
+								key: '废弃',
+								active: false,
+								value: 2
+							}
+						]
 					}
 				]
 			};
@@ -155,6 +318,47 @@
 			},
 			closeDrawer() {
 				this.showDrawer = false
+			},
+			myFilter(key, value) {
+				console.log(`${key}, ${value}`)
+				// 当前 key 值和 filterGroup 数组下标相同, 如果数据存储在服务器上, 就不是这个样子的了,要换一种写法
+				// this.filterGroup[key].data[value].active = !this.filterGroup[key].data[value].active
+				this.filterGroup.forEach(item => {
+					if (item.value == key) {
+						item.data.forEach((e,i,arr) => {
+							if (value == 0) {
+								e.active = false
+							} else {
+								arr[0].active = false
+							}
+							if (e.value == value) {
+								e.active = true
+							}
+						})
+					}
+				})
+			},
+			submit() {
+				let submitArr = []
+				this.filterGroup.forEach(item => {
+					let obj = {}
+					obj.value = item.value
+					obj.data = []
+					item.data.forEach(e => {
+						if (e.active == true) {
+							obj.data.push(e.value)
+						}
+					})
+					submitArr.push(obj)
+				})
+				console.log(JSON.stringify(submitArr));
+			},
+			reset() {
+				this.filterGroup.forEach(item => {
+					item.data.forEach(e => {
+						e.active = false
+					})
+				})
 			}
 		}
 	}
@@ -204,9 +408,6 @@
 	}
 
 	.content {
-		.status-bar {
-			background: #eee;
-		}
 		.item {
 			padding: 20upx;
 			display: flex;
@@ -263,5 +464,63 @@
 				}
 			}
 		}
+		.filterContent {
+			background: #fff;
+			.content {
+				background: #fff;
+			}
+			.filterItem {
+				padding: 20upx 10upx;
+				border-bottom: #eee solid 1upx;
+				.title {
+					font-size: 26upx;
+					color: #666;
+					padding-left: 10upx
+				}
+				.filterData {
+					display: flex;
+					flex-wrap: wrap;
+					font-size: 26upx;
+					color: #fff;
+					view {
+						padding: 4upx 10upx;
+						background: #eee;
+						border-radius: 10upx;
+						margin: 10upx;
+					}
+					.active {
+						color: #00d2f1;
+						background: #d6f3f7;
+					}
+				}
+			}
+			.footer {
+				display: flex;
+				justify-content: flex-end;
+				align-items: center;
+				padding: 0 20upx 88upx;
+				box-sizing: border-box;
+				view {
+					height: 70upx;
+					width: 175upx;
+					font-size: 32upx;
+					color: #fff;
+					text-align: center;
+					line-height: 70upx;
+				}
+				.reset {
+					background: #ff3b3b;
+					border-top-left-radius: 35upx;
+					border-bottom-left-radius: 35upx;
+					margin-right: 1upx;
+				}
+				.submit {
+					background: #00d2f1;
+					border-top-right-radius: 35upx;
+					border-bottom-right-radius: 35upx;
+				}
+			}
+		}
+		
 	}
 </style>

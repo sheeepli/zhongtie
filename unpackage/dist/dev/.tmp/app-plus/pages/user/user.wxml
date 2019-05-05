@@ -1,1 +1,1 @@
-<view bind:__l="__l">my</view>
+<view class="wrap" bind:__l="__l"><view class="status-bar"></view><view class="header"><view class="header-left"></view><view class="header-title">我的</view><view class="header-right"><navigator style="height:36rpx;width:36rpx;" url="../setting/setting"><image src="../../static/img/setting.png" mode="aspectFit"></image></navigator></view></view><view class="content"></view></view>

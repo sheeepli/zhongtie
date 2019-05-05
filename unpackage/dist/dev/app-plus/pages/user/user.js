@@ -1,1 +1,2 @@
+setCssToHead([".",[1],"status-bar { background: #00d2f1; }\n.",[1],"header { background: #00d2f1; }\n.",[1],"header .",[1],"header-title { color: #fff; }\n",],undefined,{path:"./pages/user/user.wxss"})();
 document.dispatchEvent(new CustomEvent("generateFuncReady", { detail: { generateFunc: $gwx('./pages/user/user.wxml') } }));

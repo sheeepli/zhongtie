@@ -98,47 +98,17 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;
-
-
-
-
-
-
-var _vuex = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js"); //
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
 //
 //
 //
 //
 //
-var _default = { computed: (0, _vuex.mapState)(['forcedLogin', 'hasLogin', 'userName']), onLoad: function onLoad() {
-    //      if (!this.hasLogin) {
-    //          uni.showModal({
-    //              title: '未登录',
-    //              content: '您未登录，需要登录后才能继续',
-    //              /**
-    //               * 如果需要强制登录，不显示取消按钮
-    //               */
-    //              showCancel: !this.forcedLogin,
-    //              success: (res) => {
-    //                  if (res.confirm) {
-    // /**
-    //  * 如果需要强制登录，使用reLaunch方式
-    //  */
-    //                      if (this.forcedLogin) {
-    // uni.reLaunch({
-    //     url: '../login/login'
-    // });
-    //                      } else {
-    //                          uni.navigateTo({
-    //                              url: '../login/login'
-    //                          });
-    //                      }
-    //                  }
-    //              }
-    //          });
-    //      }
-    if (this.hasLogin) {
+var _default =
+{
+  onLoad: function onLoad() {
+    var hasLogin = uni.getStorageSync('account');
+    if (!hasLogin) {
       uni.reLaunch({
         url: '../login/login' });
 

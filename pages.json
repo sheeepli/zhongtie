@@ -65,7 +65,10 @@
 			"path":"pages/user/user",
 			"style": {
 				"navigationBarTitleText":"我的",
-				"navigationBarTextStyle":"white"
+				"navigationBarTextStyle":"white",
+				"app-plus": {
+					"bounce":"none"
+				}
 
 			}
 		}, {
@@ -108,6 +111,10 @@
             "style" : {
 				"enablePullDownRefresh":true
 			}
+        }
+        ,{
+            "path" : "pages/setting/setting",
+            "style" : {}
         }
     ],
     "tabBar": {

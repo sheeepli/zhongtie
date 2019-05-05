@@ -1,73 +1,74 @@
 
 .content {
-		padding: 0;
-		margin: 0;
+	padding: 0;
+	margin: 0;
+	background: #fff;
 }
 .header {
-		height: var(--status-bar-height);
-		width: 100%;
-		background: #2a80fc;
+	height: var(--status-bar-height);
+	width: 100%;
+	background: #2a80fc;
 }
 .loginBg {
-		display: block;
-		width: 100%;
+	display: block;
+	width: 100%;
 }
 .loginBg image {
-		width: 750rpx;
-		height: 641rpx;
-		display: block;
+	width: 750rpx;
+	height: 641rpx;
+	display: block;
 }
 .input-group {
-		padding-top: 33rpx;
+	padding-top: 33rpx;
 }
 .input-row {
-		width: 500rpx;
-		height: 75rpx;
-		border: 1rpx solid #999;
-		border-radius: 10rpx;
-		padding-left: 10rpx;
-		margin: 17rpx auto;
-		-webkit-box-sizing: border-box;
-		        box-sizing: border-box;
-		display: -webkit-box;
-		display: -webkit-flex;
-		display: -ms-flexbox;
-		display: flex;
-		-webkit-box-align: center;
-		-webkit-align-items: center;
-		    -ms-flex-align: center;
-		        align-items: center;
+	width: 500rpx;
+	height: 75rpx;
+	border: 1rpx solid #999;
+	border-radius: 10rpx;
+	padding-left: 10rpx;
+	margin: 17rpx auto;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 }
 .input-row input {
-		font-size: 32rpx;
-		height: 50rpx;
+	font-size: 32rpx;
+	height: 50rpx;
 }
 .input-row image {
-		height: 37rpx;
-		width: 31rpx;
-		margin: 0 10rpx
+	height: 37rpx;
+	width: 31rpx;
+	margin: 0 10rpx
 }
 .signAndForget {
-		margin: 0 auto;
-		padding: 0;
-		width: 500rpx;
-		font-size: 26rpx;
-		display: -webkit-box;
-		display: -webkit-flex;
-		display: -ms-flexbox;
-		display: flex;
-		-webkit-box-pack: justify;
-		-webkit-justify-content: space-between;
-		    -ms-flex-pack: justify;
-		        justify-content: space-between;
-		color: #00d2f1;
+	margin: 0 auto;
+	padding: 0;
+	width: 500rpx;
+	font-size: 26rpx;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	color: #00d2f1;
 }
 .loginBtn {
-		width: 500rpx;
-		height: 92rpx;
-		background: #00D2F1;
-		margin-top: 135rpx;
-		color: #fff;
-		border-color: #00D2F1;
+	width: 500rpx;
+	height: 92rpx;
+	background: #00D2F1;
+	margin-top: 135rpx;
+	color: #fff;
+	border-color: #00D2F1;
 }
 

@@ -197,6 +197,13 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+
+
+
+
+
+
 {
   components: {
     uniSwipeAction: uniSwipeAction,
@@ -221,7 +228,163 @@ __webpack_require__.r(__webpack_exports__);
 
       filterGroup: [
       {
-        title: '月份' }] };
+        title: '文档分类',
+        value: 0,
+        data: [
+        {
+          key: '全部',
+          active: false,
+          value: 0 },
+        {
+          key: '项目设计文件',
+          active: false,
+          value: 1 },
+        {
+          key: '项目进度文件',
+          active: false,
+          value: 2 },
+        {
+          key: '项目验收文件',
+          active: false,
+          value: 3 },
+        {
+          key: '招投标文件',
+          active: false,
+          value: 4 },
+        {
+          key: '项目计划文件',
+          active: false,
+          value: 5 }] },
+
+
+      {
+        title: '月份',
+        value: 1,
+        data: [
+        {
+          key: '全部',
+          active: false,
+          value: 0 },
+        {
+          key: '一月',
+          active: false,
+          value: 1 },
+        {
+          key: '二月',
+          active: false,
+          value: 2 },
+        {
+          key: '三月',
+          active: false,
+          value: 3 },
+        {
+          key: '四月',
+          active: false,
+          value: 4 },
+        {
+          key: '五月',
+          active: false,
+          value: 5 },
+        {
+          key: '六月',
+          active: false,
+          value: 6 },
+        {
+          key: '七月',
+          active: false,
+          value: 7 },
+        {
+          key: '八月',
+          active: false,
+          value: 8 },
+        {
+          key: '九月',
+          active: false,
+          value: 9 },
+        {
+          key: '十月',
+          active: false,
+          value: 10 },
+        {
+          key: '十一月',
+          active: false,
+          value: 11 },
+        {
+          key: '十二月',
+          active: false,
+          value: 12 }] },
+
+
+      {
+        title: '所属年度',
+        value: 2,
+        data: [
+        {
+          key: '全部',
+          active: false,
+          value: 0 },
+        {
+          key: '2015',
+          active: false,
+          value: 1 },
+        {
+          key: '2016',
+          active: false,
+          value: 2 },
+        {
+          key: '2017',
+          active: false,
+          value: 3 },
+        {
+          key: '2018',
+          active: false,
+          value: 4 },
+        {
+          key: '2019',
+          active: false,
+          value: 5 }] },
+
+
+      {
+        title: '文档类型',
+        value: 3,
+        data: [
+        {
+          key: '全部',
+          active: false,
+          value: 0 },
+        {
+          key: 'WBS',
+          active: false,
+          value: 1 },
+        {
+          key: '询单报价',
+          active: false,
+          value: 2 },
+        {
+          key: '采购订单',
+          active: false,
+          value: 3 }] },
+
+
+      {
+        title: '状态',
+        value: 4,
+        data: [
+        {
+          key: '全部',
+          active: false,
+          value: 0 },
+        {
+          key: '有效',
+          active: false,
+          value: 1 },
+        {
+          key: '废弃',
+          active: false,
+          value: 2 }] }] };
+
+
 
 
 
@@ -238,13 +401,13 @@ __webpack_require__.r(__webpack_exports__);
   methods: {
     bindClick: function bindClick(btn) {
       if (btn.index === 1) {
-        console.log('分享', " at pages\\libDetail\\libDetail.vue:141");
+        console.log('分享', " at pages\\libDetail\\libDetail.vue:304");
       } else if (btn.index === 0) {
-        console.log('收藏', " at pages\\libDetail\\libDetail.vue:143");
+        console.log('收藏', " at pages\\libDetail\\libDetail.vue:306");
       }
     },
     openPage: function openPage() {
-      console.log(111, " at pages\\libDetail\\libDetail.vue:147");
+      console.log(111, " at pages\\libDetail\\libDetail.vue:310");
     },
     getMsg: function getMsg(index) {
       this.current = index;
@@ -255,6 +418,47 @@ __webpack_require__.r(__webpack_exports__);
     },
     closeDrawer: function closeDrawer() {
       this.showDrawer = false;
+    },
+    myFilter: function myFilter(key, value) {
+      console.log("".concat(key, ", ").concat(value), " at pages\\libDetail\\libDetail.vue:323");
+      // 当前 key 值和 filterGroup 数组下标相同, 如果数据存储在服务器上, 就不是这个样子的了,要换一种写法
+      // this.filterGroup[key].data[value].active = !this.filterGroup[key].data[value].active
+      this.filterGroup.forEach(function (item) {
+        if (item.value == key) {
+          item.data.forEach(function (e, i, arr) {
+            if (value == 0) {
+              e.active = false;
+            } else {
+              arr[0].active = false;
+            }
+            if (e.value == value) {
+              e.active = true;
+            }
+          });
+        }
+      });
+    },
+    submit: function submit() {
+      var submitArr = [];
+      this.filterGroup.forEach(function (item) {
+        var obj = {};
+        obj.value = item.value;
+        obj.data = [];
+        item.data.forEach(function (e) {
+          if (e.active == true) {
+            obj.data.push(e.value);
+          }
+        });
+        submitArr.push(obj);
+      });
+      console.log(JSON.stringify(submitArr), " at pages\\libDetail\\libDetail.vue:354");
+    },
+    reset: function reset() {
+      this.filterGroup.forEach(function (item) {
+        item.data.forEach(function (e) {
+          e.active = false;
+        });
+      });
     } } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ "./node_modules/@dcloudio/uni-app-plus/dist/index.js")["default"]))
 
