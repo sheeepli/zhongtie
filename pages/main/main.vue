@@ -1,5 +1,5 @@
 <template>
-	<view class="content">
+	<view>
 
 	</view>
 </template>
@@ -8,6 +8,7 @@
 	export default {
 		onLoad() {
 			let hasLogin = uni.getStorageSync('account')
+			console.log("hasLogin: " + JSON.stringify(hasLogin));
 			if (!hasLogin) {
 				uni.reLaunch({
 					url: '../login/login'
@@ -23,24 +24,4 @@
 </script>
 
 <style>
-	.hello {
-		display: flex;
-		flex: 1;
-		flex-direction: column;
-	}
-
-	.title {
-		color: #8f8f94;
-		margin-top: 50upx;
-	}
-
-	.ul {
-		font-size: 30upx;
-		color: #8f8f94;
-		margin-top: 50upx;
-	}
-
-	.ul>view {
-		line-height: 50upx;
-	}
 </style>

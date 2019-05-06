@@ -116,6 +116,10 @@
             "path" : "pages/setting/setting",
             "style" : {}
         }
+        ,{
+            "path" : "pages/management/management",
+            "style" : {}
+        }
     ],
     "tabBar": {
         "color": "#7a7e83",

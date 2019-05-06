@@ -1,0 +1,35 @@
+.content text {
+  font-size: 28rpx;
+}
+.content view {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 20rpx;
+  height: 100rpx;
+  margin-top: 20rpx;
+  background: #fff;
+}
+.content view image {
+  height: 30rpx;
+  width: 30rpx;
+  display: block;
+}
+.content .logout {
+  margin-top: 20rpx;
+  background: #fff;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  width: 100%;
+}
+

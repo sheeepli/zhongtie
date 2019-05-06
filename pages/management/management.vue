@@ -1,0 +1,30 @@
+<template>
+		<view class="wrap">
+			<view class="status-bar"></view>
+			<view class="header">
+				<view class="header-left">
+					<navigator open-type="navigateBack" delta="1" style="height: 42upx; width: 42upx;">
+						<image src="../../static/img/left_arrow.png" mode=""></image>
+					</navigator>
+				</view>
+				<view class="header-title">资料管理</view>
+				<view class="header-right"></view>
+			</view>
+			<view class="content">
+			</view>
+		</view>
+</template>
+
+<script>
+	export default {
+		data() {
+			return {
+				
+			};
+		}
+	}
+</script>
+
+<style lang="less">
+
+</style>

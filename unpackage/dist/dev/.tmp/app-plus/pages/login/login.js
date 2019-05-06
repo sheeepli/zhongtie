@@ -128,6 +128,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+
 var _request = _interopRequireDefault(__webpack_require__(/*! ../../utils/request.js */ "../../../../code files/中铁/zhongtie/utils/request.js"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };} //
 //
 //
@@ -157,36 +159,49 @@ var _request = _interopRequireDefault(__webpack_require__(/*! ../../utils/reques
 //
 //
 //
-var mInput = function mInput() {return __webpack_require__.e(/*! import() | components/m-input */ "components/m-input").then(__webpack_require__.bind(null, /*! ../../components/m-input.vue */ "../../../../code files/中铁/zhongtie/components/m-input.vue"));};var _default = { components: { mInput: mInput }, data: function data() {return { account: '', password: '' };}, bindLogin: function bindLogin() {var _this = this;if (this.account.length < 5) {uni.showToast({ icon: 'none', title: '账号最短为 5 个字符' });return;}if (this.password.length < 6) {uni.showToast({ icon: 'none', title: '密码最短为 6 个字符' });return;}console.log("".concat(this.account, ", ").concat(this.password), " at pages\\login\\login.vue:59");uni.request({
-      url: "http://192.168.2.168:7089/default/@zopen.papi:login",
-      data: {
-        username: this.account,
-        password: this.password,
-        redirectUrl: 'http://192.168.2.168:7089/__cache__/workonline/201901081526/mobile/knowledgeProject/htmls/bootPage/login.html' },
+//
+//
+var mInput = function mInput() {return __webpack_require__.e(/*! import() | components/m-input */ "components/m-input").then(__webpack_require__.bind(null, /*! ../../components/m-input.vue */ "../../../../code files/中铁/zhongtie/components/m-input.vue"));};var _default = { components: { mInput: mInput }, data: function data() {return { account: '', password: '', disabled: false };}, methods: { bindLogin: function bindLogin() {var _this = this;if (this.account.length < 5) {uni.showToast({ icon: 'none', title: '账号最短为 5 个字符' });return;}if (this.password.length < 6) {uni.showToast({ icon: 'none', title: '密码最短为 6 个字符' });return;}this.disabled = true;console.log("".concat(this.account, ", ").concat(this.password), " at pages\\login\\login.vue:64");
+      uni.request({
+        url: "http://192.168.2.168:7089/default/@zopen.papi:login",
+        data: {
+          username: this.account,
+          password: this.password,
+          redirectUrl: 'http://192.168.2.168:7089/__cache__/workonline/201901081526/mobile/knowledgeProject/htmls/bootPage/login.html' },
 
-      method: 'GET',
-      header: {
-        'content-type': 'application/json' },
+        method: 'GET',
+        header: {
+          'content-type': 'application/json' },
 
-      success: function success(res) {
-        uni.setStorageSync({
-          key: 'account',
-          value: _this.account });
+        complete: function complete(res) {
+          _this.disabled = false;
+          if (res.data.code != 0) {
+            uni.showToast({
+              icon: 'none',
+              title: "\u767B\u5F55\u5931\u8D25\uFF0C".concat(res.data.message) });
 
-        toMain();
-      } });
+            return;
+          }
+          console.log("res: " + JSON.stringify(res), " at pages\\login\\login.vue:85");
+          uni.setStorageSync('account', _this.account);
+          _this.toMain();
+        },
+        fail: function fail(err) {
+          console.log(JSON.stringify(err), " at pages\\login\\login.vue:90");
+        } });
 
-  },
-  toMain: function toMain() {
-    uni.reLaunch({
-      url: '../main/main' });
+    },
+    toMain: function toMain() {
+      uni.reLaunch({
+        url: '../main/main' });
 
-  },
-  toPage: function toPage(pageName) {
-    uni.navigateTo({
-      url: "/pages/".concat(pageName, "/").concat(pageName) });
+    },
+    toPage: function toPage(pageName) {
+      uni.navigateTo({
+        url: "/pages/".concat(pageName, "/").concat(pageName) });
 
-  },
+    } },
+
   onReady: function onReady() {} };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ "./node_modules/@dcloudio/uni-app-plus/dist/index.js")["default"]))
 

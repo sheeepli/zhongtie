@@ -7,4 +7,102 @@
 .header .header-title {
   color: #fff;
 }
+.content .userMsg {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 33rpx 20rpx;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #fff;
+}
+.content .userMsg .album {
+  height: 130rpx;
+  width: 130rpx;
+  border-radius: 50%;
+}
+.content .userMsg .msg {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-align-content: center;
+      -ms-flex-line-pack: center;
+          align-content: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin-left: 35rpx;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.content .userMsg .msg .LV {
+  background: #f8cf13;
+  color: #fff;
+  font-size: 26rpx;
+  padding: 0 8rpx;
+  border-radius: 26rpx;
+  width: auto;
+  max-width: 70rpx;
+  text-align: center;
+}
+.content .userMsg .msg .name {
+  font-size: 34rpx;
+}
+.content .userMsg .right {
+  color: #999;
+  font-size: 26rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.content .list {
+  margin-top: 20rpx;
+}
+.content .list .item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 20rpx;
+  height: 100rpx;
+  border-bottom: 1rpx solid #eee;
+  background: #fff;
+}
+.content .list .item .icon {
+  height: 45rpx;
+  width: 45rpx;
+}
+.content .list .item .text {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding-left: 20rpx;
+}
+.right-arrow {
+  height: 30rpx;
+  width: 30rpx;
+  display: block;
+}
 

@@ -13,7 +13,8 @@
     "pages/libDetail/libDetail",
     "pages/innerSearch/innerSearch",
     "pages/search/search",
-    "pages/setting/setting"
+    "pages/setting/setting",
+    "pages/management/management"
   ],
   "subPackages": [],
   "window": {

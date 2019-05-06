@@ -98,7 +98,24 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -120,10 +137,63 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 var _default =
 {
   data: function data() {
-    return {};
+    return {
+      useralbum: '../../static/img/album.png',
+      userLV: 1,
+      userName: '王某人',
+      list: [
+      [{
+        iconUrl: '../../static/img/resources.png',
+        text: '资源',
+        pageName: 'resources' }],
+      [{
+        iconUrl: '../../static/img/downloads.png',
+        text: '下载',
+        pageName: 'downloads' },
+      {
+        iconUrl: '../../static/img/attention.png',
+        text: '关注',
+        pageName: 'attention' },
+      {
+        iconUrl: '../../static/img/share.png',
+        text: '分享',
+        pageName: 'share' },
+      {
+        iconUrl: '../../static/img/collection.png',
+        text: '收藏',
+        pageName: 'collection' }],
+      [{
+        iconUrl: '../../static/img/messages.png',
+        text: '消息',
+        pageName: 'messages' }],
+      [{
+        iconUrl: '../../static/img/evaluation.png',
+        text: '评价',
+        pageName: 'evaluation' }]] };
 
 
+
+  },
+  methods: {
+    openPage: function openPage(pageName) {
+      uni.navigateTo({
+        url: "../".concat(pageName, "/").concat(pageName),
+        success: function success(res) {},
+        fail: function fail() {},
+        complete: function complete() {} });
+
+    } },
+
+  onLoad: function onLoad() {
+    // uni.request({
+    // 	url: `http://192.168.2.168:7089/default/@zopen.papi:getProfileInfo`,
+    // 	method: 'POST',
+    // 	complete: (res) => {
+    // 		console.log("res: " + JSON.stringify(res));
+    // 	}
+    // })
   } };exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ "./node_modules/@dcloudio/uni-app-plus/dist/index.js")["default"]))
 
 /***/ }),
 

@@ -148,6 +148,23 @@ createPage(_main.default);
 
 /***/ }),
 
+/***/ "../../../../code files/中铁/zhongtie/main.js?{\"page\":\"pages%2Fmanagement%2Fmanagement\"}":
+/*!************************************************************************************!*\
+  !*** D:/code files/中铁/zhongtie/main.js?{"page":"pages%2Fmanagement%2Fmanagement"} ***!
+  \************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "../../../../code files/中铁/zhongtie/pages.json");
+
+var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js"));
+var _management = _interopRequireDefault(__webpack_require__(/*! ./pages/management/management.vue */ "../../../../code files/中铁/zhongtie/pages/management/management.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+createPage(_management.default);
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ "./node_modules/@dcloudio/uni-app-plus/dist/index.js")["createPage"]))
+
+/***/ }),
+
 /***/ "../../../../code files/中铁/zhongtie/main.js?{\"page\":\"pages%2Fpwd%2Fpwd\"}":
 /*!**********************************************************************!*\
   !*** D:/code files/中铁/zhongtie/main.js?{"page":"pages%2Fpwd%2Fpwd"} ***!
