@@ -81,34 +81,34 @@
 			};
 		},
 		onLoad() {
-			// uni.setStorage({
-			// 	key: 'libList',
-			// 	data: [{
-			// 		id: '1',
-			// 		imgUrl: '../../static/img/library_1.png',
-			// 		text: '内部规范制度资料库'
-			// 	}, {
-			// 		id: '2',
-			// 		imgUrl: '../../static/img/library_2.png',
-			// 		text: '盾构施工常见问题库'
-			// 	}, {
-			// 		id: '3',
-			// 		imgUrl: '../../static/img/library_3.png',
-			// 		text: '内部规范制度资料库'
-			// 	}, {
-			// 		id: '4',
-			// 		imgUrl: '../../static/img/library_4.png',
-			// 		text: '内部规范制度资料库'
-			// 	}, {
-			// 		id: '5',
-			// 		imgUrl: '../../static/img/library_5.png',
-			// 		text: '内部规范制度资料库'
-			// 	}, {
-			// 		id: '6',
-			// 		imgUrl: '../../static/img/library_6.png',
-			// 		text: '内部规范制度资料库'
-			// 	}]
-			// })
+			uni.setStorage({
+				key: 'libList',
+				data: [{
+					id: '1',
+					imgUrl: '../../static/img/library_1.png',
+					text: '内部规范制度资料库'
+				}, {
+					id: '2',
+					imgUrl: '../../static/img/library_2.png',
+					text: '盾构施工常见问题库'
+				}, {
+					id: '3',
+					imgUrl: '../../static/img/library_3.png',
+					text: '内部规范制度资料库'
+				}, {
+					id: '4',
+					imgUrl: '../../static/img/library_4.png',
+					text: '内部规范制度资料库'
+				}, {
+					id: '5',
+					imgUrl: '../../static/img/library_5.png',
+					text: '内部规范制度资料库'
+				}, {
+					id: '6',
+					imgUrl: '../../static/img/library_6.png',
+					text: '内部规范制度资料库'
+				}]
+			})
 			
 			uni.getStorage({
 				key: 'libList',

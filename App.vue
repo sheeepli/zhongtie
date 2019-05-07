@@ -89,4 +89,25 @@
 		height: 100%;
 		background-color: #efeff4;
 	}
+	
+	.form-group-list {
+		margin-top: 20upx;
+		.form-group {
+			height: 100upx;
+			padding: 0 20upx;
+			border-bottom: 1upx solid #efeff4;
+			background: #fff;
+			font-size: 26upx;
+			display: flex;
+			align-items: center;
+			.input-label {
+				width: 150upx;
+				color: #666;
+			}
+			input {
+				color: #333;
+				flex: 1;
+			}
+		}
+	}
 </style>

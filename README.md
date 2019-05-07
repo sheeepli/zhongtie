@@ -49,6 +49,14 @@
 3. js `构造方法` 使用 `大驼峰`
 **以后写代码的时候要时刻想到这个**
 
+## 5.7
+**骂人可以嘛，玩了一早上游戏，看了一下午手机，你想干嘛？？？**
+### 完成页面
+1. 资料管理页面
+
+### 明天的事情
+1. 将昨天的事情做完。。。
+
 
 ## 规范
 * class 命名规范
@@ -66,30 +74,43 @@
     * `item-main`
     * `item-title`
     * `item-text`
-	``` html
-	  <!-- 大致代码 -->
-	  <view class="wrap">
-	  	<view class="status-bar"></view>
-	  	<view class="header">
-	  		<view class="header-left"></view>
-	  		<view class="header-title"></view>
-	  		<view class="header-right"></view>
-	  	</view>
-	  	<view class="content">
-	  		<view class="list">
-	  			<view class="list-title"></view>
-	  			<view class="item">
-	  				<view class="item-img"></view>
-	  				<view class="item-main">
-	  					<view class="item-title"></view>
-	  					<view class="item-text"></view>
-	  				</view>
-	  			</view>
-	  		</view>
-	  	</view>
-	  	<view class="footer"></view>
-	  </view>
-	```
+		``` html
+			<!-- 大致代码 -->
+			<view class="wrap">
+				<view class="status-bar"></view>
+				<view class="header">
+					<view class="header-left"></view>
+					<view class="header-title"></view>
+					<view class="header-right"></view>
+				</view>
+				<view class="content">
+					<view class="list">
+						<view class="list-title"></view>
+						<view class="item">
+							<view class="item-img"></view>
+							<view class="item-main">
+								<view class="item-title"></view>
+								<view class="item-text"></view>
+							</view>
+						</view>
+					</view>
+				</view>
+				<view class="footer"></view>
+			</view>
+		```
+	7. 组（group）的存在
+		输入框组
+		左边为150upx，右边占满（flex: 1）；
+		左边颜色为#666，26upx，右边#333，26upx；
+		``` html
+			<view class="form-group-list">
+				<view class="form-group">
+					<view class="input-label"></view>
+					<input type="text">
+				</view>
+			</view>
+		```
+		
 * 样式统一
   1. 通用格式写在app.vue页面中
   2. 关于顶部的样式

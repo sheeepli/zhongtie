@@ -97,10 +97,34 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 //
 //
 //
+//
+//
+//
+//
+//
+//
 var _default =
 {
   data: function data() {
-    return {};
+    return {
+      list: [
+      [
+      {
+        key: '昵称',
+        value: 'kevin' },
+      {
+        key: '性别',
+        value: '男' }],
+
+      [
+      {
+        key: '邮箱',
+        value: '123@163.com' },
+      {
+        key: '手机号',
+        value: '12345678910' }]] };
+
+
 
 
   } };exports.default = _default;

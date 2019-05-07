@@ -1532,7 +1532,7 @@ return root;
 
 
 
-__wxAppCode__['app.json']={"pages":["pages/main/main","pages/login/login","pages/reg/reg","pages/forget/forget","pages/pwd/pwd","pages/know/know","pages/specital/specital","pages/smart/smart","pages/found/found","pages/user/user","pages/libDetail/libDetail","pages/innerSearch/innerSearch","pages/search/search","pages/setting/setting"],"subPackages":[],"window":{"navigationBarTextStyle":"black","navigationBarBackgroundColor":"#00d2f1","backgroundColor":"#fbf9fe","navigationStyle":"custom"},"tabBar":{"color":"#7a7e83","selectedColor":"#00d2f1","backgroundColor":"#ffffff","list":[{"pagePath":"pages/know/know","text":"知识库","iconPath":"static/img/home.png","selectedIconPath":"static/img/homeHL.png"},{"pagePath":"pages/specital/specital","text":"专家库","iconPath":"static/img/home.png","selectedIconPath":"static/img/homeHL.png"},{"pagePath":"pages/smart/smart","text":"智能掘进","iconPath":"static/img/home.png","selectedIconPath":"static/img/homeHL.png"},{"pagePath":"pages/found/found","text":"发现","iconPath":"static/img/home.png","selectedIconPath":"static/img/homeHL.png"},{"pagePath":"pages/user/user","text":"我的","iconPath":"static/img/home.png","selectedIconPath":"static/img/homeHL.png"}]},"splashscreen":{"alwaysShowBeforeRender":true,"autoclose":false},"appname":"zhongtie","compilerVersion":"1.9.3","usingComponents":{}};
+__wxAppCode__['app.json']={"pages":["pages/main/main","pages/login/login","pages/reg/reg","pages/forget/forget","pages/pwd/pwd","pages/know/know","pages/specital/specital","pages/smart/smart","pages/found/found","pages/user/user","pages/libDetail/libDetail","pages/innerSearch/innerSearch","pages/search/search","pages/setting/setting","pages/management/management"],"subPackages":[],"window":{"navigationBarTextStyle":"black","navigationBarBackgroundColor":"#00d2f1","backgroundColor":"#fbf9fe","navigationStyle":"custom"},"tabBar":{"color":"#7a7e83","selectedColor":"#00d2f1","backgroundColor":"#ffffff","list":[{"pagePath":"pages/know/know","text":"知识库","iconPath":"static/img/home.png","selectedIconPath":"static/img/homeHL.png"},{"pagePath":"pages/specital/specital","text":"专家库","iconPath":"static/img/home.png","selectedIconPath":"static/img/homeHL.png"},{"pagePath":"pages/smart/smart","text":"智能掘进","iconPath":"static/img/home.png","selectedIconPath":"static/img/homeHL.png"},{"pagePath":"pages/found/found","text":"发现","iconPath":"static/img/home.png","selectedIconPath":"static/img/homeHL.png"},{"pagePath":"pages/user/user","text":"我的","iconPath":"static/img/home.png","selectedIconPath":"static/img/homeHL.png"}]},"splashscreen":{"alwaysShowBeforeRender":true,"autoclose":false},"appname":"zhongtie","compilerVersion":"1.9.4","usingComponents":{}};
 __wxAppCode__['app.wxml']=$gwx('./app.wxml');
 
 __wxAppCode__['components/m-icon/m-icon.json']={"usingComponents":{},"component":true};
@@ -2745,7 +2745,7 @@ function getData(vueOptions, context) {
     try {
       data = data.call(context); // 支持 Vue.prototype 上挂的数据
     } catch (e) {
-      if (Object({"NODE_ENV":"development","VUE_APP_PLATFORM":"app-plus","BASE_URL":"/"}).VUE_APP_DEBUG) {
+      if (Object({"VUE_APP_PLATFORM":"app-plus","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
         console.warn('根据 Vue 的 data 函数初始化小程序 data 失败，请尽量确保 data 函数中不访问 vm 对象，否则可能影响首次数据渲染速度。', data);
       }
     }
@@ -8824,7 +8824,7 @@ function type(obj) {
 
 function flushCallbacks$1(vm) {
     if (vm.__next_tick_callbacks && vm.__next_tick_callbacks.length) {
-        if (Object({"NODE_ENV":"development","VUE_APP_PLATFORM":"app-plus","BASE_URL":"/"}).VUE_APP_DEBUG) {
+        if (Object({"VUE_APP_PLATFORM":"app-plus","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
             var mpInstance = vm.$mp[vm.mpType];
             console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
                 ']:flushCallbacks[' + vm.__next_tick_callbacks.length + ']');
@@ -8845,14 +8845,14 @@ function nextTick$1(vm, cb) {
     //1.nextTick 之前 已 setData 且 setData 还未回调完成
     //2.nextTick 之前存在 render watcher
     if (!vm.__next_tick_pending && !hasRenderWatcher(vm)) {
-        if(Object({"NODE_ENV":"development","VUE_APP_PLATFORM":"app-plus","BASE_URL":"/"}).VUE_APP_DEBUG){
+        if(Object({"VUE_APP_PLATFORM":"app-plus","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG){
             var mpInstance = vm.$mp[vm.mpType];
             console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
                 ']:nextVueTick');
         }
         return nextTick(cb, vm)
     }else{
-        if(Object({"NODE_ENV":"development","VUE_APP_PLATFORM":"app-plus","BASE_URL":"/"}).VUE_APP_DEBUG){
+        if(Object({"VUE_APP_PLATFORM":"app-plus","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG){
             var mpInstance$1 = vm.$mp[vm.mpType];
             console.log('[' + (+new Date) + '][' + (mpInstance$1.is || mpInstance$1.route) + '][' + vm._uid +
                 ']:nextMPTick');
@@ -8921,7 +8921,7 @@ var patch = function(oldVnode, vnode) {
         });
         var diffData = diff(data, mpData);
         if (Object.keys(diffData).length) {
-            if (Object({"NODE_ENV":"development","VUE_APP_PLATFORM":"app-plus","BASE_URL":"/"}).VUE_APP_DEBUG) {
+            if (Object({"VUE_APP_PLATFORM":"app-plus","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
                 console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + this._uid +
                     ']差量更新',
                     JSON.stringify(diffData));
@@ -9188,6 +9188,7 @@ var LIFECYCLE_HOOKS$1 = [
     'onShow',
     'onHide',
     'onUniNViewMessage',
+    'onError',
     //Page
     'onLoad',
     // 'onShow',
@@ -12408,34 +12409,34 @@ var _default =
 
   },
   onLoad: function onLoad() {var _this = this;
-    // uni.setStorage({
-    // 	key: 'libList',
-    // 	data: [{
-    // 		id: '1',
-    // 		imgUrl: '../../static/img/library_1.png',
-    // 		text: '内部规范制度资料库'
-    // 	}, {
-    // 		id: '2',
-    // 		imgUrl: '../../static/img/library_2.png',
-    // 		text: '盾构施工常见问题库'
-    // 	}, {
-    // 		id: '3',
-    // 		imgUrl: '../../static/img/library_3.png',
-    // 		text: '内部规范制度资料库'
-    // 	}, {
-    // 		id: '4',
-    // 		imgUrl: '../../static/img/library_4.png',
-    // 		text: '内部规范制度资料库'
-    // 	}, {
-    // 		id: '5',
-    // 		imgUrl: '../../static/img/library_5.png',
-    // 		text: '内部规范制度资料库'
-    // 	}, {
-    // 		id: '6',
-    // 		imgUrl: '../../static/img/library_6.png',
-    // 		text: '内部规范制度资料库'
-    // 	}]
-    // })
+    uni.setStorage({
+      key: 'libList',
+      data: [{
+        id: '1',
+        imgUrl: '../../static/img/library_1.png',
+        text: '内部规范制度资料库' },
+      {
+        id: '2',
+        imgUrl: '../../static/img/library_2.png',
+        text: '盾构施工常见问题库' },
+      {
+        id: '3',
+        imgUrl: '../../static/img/library_3.png',
+        text: '内部规范制度资料库' },
+      {
+        id: '4',
+        imgUrl: '../../static/img/library_4.png',
+        text: '内部规范制度资料库' },
+      {
+        id: '5',
+        imgUrl: '../../static/img/library_5.png',
+        text: '内部规范制度资料库' },
+      {
+        id: '6',
+        imgUrl: '../../static/img/library_6.png',
+        text: '内部规范制度资料库' }] });
+
+
 
     uni.getStorage({
       key: 'libList',
@@ -14249,10 +14250,34 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 //
 //
 //
+//
+//
+//
+//
+//
+//
 var _default =
 {
   data: function data() {
-    return {};
+    return {
+      list: [
+      [
+      {
+        key: '昵称',
+        value: 'kevin' },
+      {
+        key: '性别',
+        value: '男' }],
+
+      [
+      {
+        key: '邮箱',
+        value: '123@163.com' },
+      {
+        key: '手机号',
+        value: '12345678910' }]] };
+
+
 
 
   } };exports.default = _default;

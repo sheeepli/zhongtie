@@ -11,6 +11,12 @@
 				<view class="header-right"></view>
 			</view>
 			<view class="content">
+				<view class="form-group-list" v-for="(item, index) in list" :key="index">
+					<view class="form-group" v-for="(el, i) in item" :key="i">
+						<view class="input-label">{{el.key}}</view>
+						<input type="text" :value="el.value">
+					</view>
+				</view>
 			</view>
 		</view>
 </template>
@@ -19,7 +25,25 @@
 	export default {
 		data() {
 			return {
-				
+				list: [
+					[
+						{
+							key: '昵称',
+							value: 'kevin'
+						}, {
+							key: '性别',
+							value: '男'
+						}
+					], [
+						{
+							key: '邮箱',
+							value: '123@163.com'
+						}, {
+							key: '手机号',
+							value: '12345678910'
+						}
+					]
+				]
 			};
 		}
 	}
