@@ -29,6 +29,23 @@ createApp(app).$mount();
 
 /***/ }),
 
+/***/ "../../../../code files/中铁/zhongtie/main.js?{\"page\":\"pages%2Fdownloads%2Fdownloads\"}":
+/*!**********************************************************************************!*\
+  !*** D:/code files/中铁/zhongtie/main.js?{"page":"pages%2Fdownloads%2Fdownloads"} ***!
+  \**********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "../../../../code files/中铁/zhongtie/pages.json");
+
+var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js"));
+var _downloads = _interopRequireDefault(__webpack_require__(/*! ./pages/downloads/downloads.vue */ "../../../../code files/中铁/zhongtie/pages/downloads/downloads.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+createPage(_downloads.default);
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ "./node_modules/@dcloudio/uni-app-plus/dist/index.js")["createPage"]))
+
+/***/ }),
+
 /***/ "../../../../code files/中铁/zhongtie/main.js?{\"page\":\"pages%2Fforget%2Fforget\"}":
 /*!****************************************************************************!*\
   !*** D:/code files/中铁/zhongtie/main.js?{"page":"pages%2Fforget%2Fforget"} ***!
@@ -165,6 +182,23 @@ createPage(_management.default);
 
 /***/ }),
 
+/***/ "../../../../code files/中铁/zhongtie/main.js?{\"page\":\"pages%2Fmessages%2Fmessages\"}":
+/*!********************************************************************************!*\
+  !*** D:/code files/中铁/zhongtie/main.js?{"page":"pages%2Fmessages%2Fmessages"} ***!
+  \********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "../../../../code files/中铁/zhongtie/pages.json");
+
+var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js"));
+var _messages = _interopRequireDefault(__webpack_require__(/*! ./pages/messages/messages.vue */ "../../../../code files/中铁/zhongtie/pages/messages/messages.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+createPage(_messages.default);
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ "./node_modules/@dcloudio/uni-app-plus/dist/index.js")["createPage"]))
+
+/***/ }),
+
 /***/ "../../../../code files/中铁/zhongtie/main.js?{\"page\":\"pages%2Fpwd%2Fpwd\"}":
 /*!**********************************************************************!*\
   !*** D:/code files/中铁/zhongtie/main.js?{"page":"pages%2Fpwd%2Fpwd"} ***!
@@ -195,6 +229,40 @@ createPage(_pwd.default);
 var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js"));
 var _reg = _interopRequireDefault(__webpack_require__(/*! ./pages/reg/reg.vue */ "../../../../code files/中铁/zhongtie/pages/reg/reg.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
 createPage(_reg.default);
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ "./node_modules/@dcloudio/uni-app-plus/dist/index.js")["createPage"]))
+
+/***/ }),
+
+/***/ "../../../../code files/中铁/zhongtie/main.js?{\"page\":\"pages%2Freminder%2Freminder\"}":
+/*!********************************************************************************!*\
+  !*** D:/code files/中铁/zhongtie/main.js?{"page":"pages%2Freminder%2Freminder"} ***!
+  \********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "../../../../code files/中铁/zhongtie/pages.json");
+
+var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js"));
+var _reminder = _interopRequireDefault(__webpack_require__(/*! ./pages/reminder/reminder.vue */ "../../../../code files/中铁/zhongtie/pages/reminder/reminder.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+createPage(_reminder.default);
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ "./node_modules/@dcloudio/uni-app-plus/dist/index.js")["createPage"]))
+
+/***/ }),
+
+/***/ "../../../../code files/中铁/zhongtie/main.js?{\"page\":\"pages%2Fresources%2Fresources\"}":
+/*!**********************************************************************************!*\
+  !*** D:/code files/中铁/zhongtie/main.js?{"page":"pages%2Fresources%2Fresources"} ***!
+  \**********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "../../../../code files/中铁/zhongtie/pages.json");
+
+var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js"));
+var _resources = _interopRequireDefault(__webpack_require__(/*! ./pages/resources/resources.vue */ "../../../../code files/中铁/zhongtie/pages/resources/resources.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+createPage(_resources.default);
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ "./node_modules/@dcloudio/uni-app-plus/dist/index.js")["createPage"]))
 
 /***/ }),

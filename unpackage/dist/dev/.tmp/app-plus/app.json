@@ -14,7 +14,11 @@
     "pages/innerSearch/innerSearch",
     "pages/search/search",
     "pages/setting/setting",
-    "pages/management/management"
+    "pages/management/management",
+    "pages/reminder/reminder",
+    "pages/resources/resources",
+    "pages/downloads/downloads",
+    "pages/messages/messages"
   ],
   "subPackages": [],
   "window": {

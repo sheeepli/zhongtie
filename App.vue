@@ -92,7 +92,7 @@
 	
 	.form-group-list {
 		margin-top: 20upx;
-		.form-group {
+		.group {
 			height: 100upx;
 			padding: 0 20upx;
 			border-bottom: 1upx solid #efeff4;
@@ -100,6 +100,8 @@
 			font-size: 26upx;
 			display: flex;
 			align-items: center;
+		}
+		.input-group {
 			.input-label {
 				width: 150upx;
 				color: #666;
@@ -109,5 +111,9 @@
 				flex: 1;
 			}
 		}
+		.switch-group {
+			justify-content: space-between;
+		}
+		
 	}
 </style>

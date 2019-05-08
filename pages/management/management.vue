@@ -12,7 +12,7 @@
 			</view>
 			<view class="content">
 				<view class="form-group-list" v-for="(item, index) in list" :key="index">
-					<view class="form-group" v-for="(el, i) in item" :key="i">
+					<view class="input-group group" v-for="(el, i) in item" :key="i">
 						<view class="input-label">{{el.key}}</view>
 						<input type="text" :value="el.value">
 					</view>

@@ -111,7 +111,7 @@ m-input {
 .form-group-list {
   margin-top: 20rpx;
 }
-.form-group-list .form-group {
+.form-group-list .group {
   height: 100rpx;
   padding: 0 20rpx;
   border-bottom: 1rpx solid #efeff4;
@@ -126,15 +126,21 @@ m-input {
       -ms-flex-align: center;
           align-items: center;
 }
-.form-group-list .form-group .input-label {
+.form-group-list .input-group .input-label {
   width: 150rpx;
   color: #666;
 }
-.form-group-list .form-group input {
+.form-group-list .input-group input {
   color: #333;
   -webkit-box-flex: 1;
   -webkit-flex: 1;
       -ms-flex: 1;
           flex: 1;
+}
+.form-group-list .switch-group {
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 

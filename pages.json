@@ -120,6 +120,26 @@
             "path" : "pages/management/management",
             "style" : {}
         }
+        ,{
+            "path" : "pages/reminder/reminder",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/resources/resources",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/downloads/downloads",
+            "style" : {
+				"app-plus": {
+					"bounce": "none"
+				}
+			}
+        }
+        ,{
+            "path" : "pages/messages/messages",
+            "style" : {}
+        }
     ],
     "tabBar": {
         "color": "#7a7e83",
