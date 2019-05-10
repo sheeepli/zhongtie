@@ -332,7 +332,7 @@
 								arr[0].active = false
 							}
 							if (e.value == value) {
-								e.active = true
+								e.active = !e.active
 							}
 						})
 					}

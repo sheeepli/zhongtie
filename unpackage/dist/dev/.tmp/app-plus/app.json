@@ -18,7 +18,8 @@
     "pages/reminder/reminder",
     "pages/resources/resources",
     "pages/downloads/downloads",
-    "pages/messages/messages"
+    "pages/messages/messages",
+    "pages/evaluation/evaluation"
   ],
   "subPackages": [],
   "window": {

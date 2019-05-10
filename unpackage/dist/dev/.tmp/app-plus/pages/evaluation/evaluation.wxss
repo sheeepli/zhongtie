@@ -1,0 +1,103 @@
+.header {
+  border-bottom: 1rpx solid #eee;
+}
+.content .list .item {
+  padding: 20rpx;
+  background: #fff;
+  margin-bottom: 20rpx;
+}
+.content .list .item .item-header {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.content .list .item .item-header .album {
+  height: 55rpx;
+  width: 55rpx;
+  border-radius: 50%;
+}
+.content .list .item .item-header .name {
+  margin-left: 20rpx;
+  font-size: 26rpx;
+  color: #666;
+}
+.content .list .item .item-header .star {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+.content .list .item .item-header .star image {
+  margin-left: 10rpx;
+  height: 26rpx;
+  width: 26rpx;
+}
+.content .list .item .item-content .item-text {
+  font-size: 26rpx;
+  color: #333;
+  margin-bottom: 20rpx;
+}
+.content .list .item .item-content .item-main {
+  background: #f8f8f8;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20rpx;
+  margin: 10rpx 0;
+}
+.content .list .item .item-content .item-main .item-img {
+  height: 95rpx;
+  width: 95rpx;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.content .list .item .item-content .item-main .item-img image {
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+.content .list .item .item-content .item-main .item-body {
+  font-size: 26rpx;
+}
+.content .list .item .item-content .item-main .item-body .item-header .name {
+  color: #333;
+  font-size: 32rpx;
+}
+.content .list .item .item-content .item-main .item-body .item-header .LV {
+  color: #fff;
+  background: #f8cf13;
+  border-radius: 26rpx;
+  padding: 0 8rpx;
+}
+.content .list .item .item-content .item-main .item-body .item-content,
+.content .list .item .item-content .item-main .item-body .item-footer {
+  margin-left: 20rpx;
+  color: #666;
+}
+.content .list .item .item-content .item-main .item-body .item-content text,
+.content .list .item .item-content .item-main .item-body .item-footer text {
+  margin-right: 20rpx;
+}
+.content .list .item .item-footer {
+  font-size: 24rpx;
+  color: #999;
+}
+

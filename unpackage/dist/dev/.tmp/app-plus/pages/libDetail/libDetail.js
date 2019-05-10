@@ -432,7 +432,7 @@ __webpack_require__.r(__webpack_exports__);
               arr[0].active = false;
             }
             if (e.value == value) {
-              e.active = true;
+              e.active = !e.active;
             }
           });
         }

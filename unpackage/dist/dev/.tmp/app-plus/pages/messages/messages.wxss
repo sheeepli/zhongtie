@@ -40,8 +40,8 @@
   color: #fff;
   position: absolute;
   background: red;
-  top: 0rpx;
-  right: 0rpx;
+  top: -5rpx;
+  right: -5rpx;
   border-radius: 50%;
 }
 .list .item .item-main {

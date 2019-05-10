@@ -140,6 +140,14 @@
             "path" : "pages/messages/messages",
             "style" : {}
         }
+        ,{
+            "path" : "pages/evaluation/evaluation",
+            "style" : {
+            	"app-plus": {
+            		"bounce": "none"
+            	}
+            }
+        }
     ],
     "tabBar": {
         "color": "#7a7e83",
